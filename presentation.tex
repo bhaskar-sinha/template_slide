@@ -1,0 +1,117 @@
+\documentclass[12pt,xcolor={dvipsnames},hyperref={pdftex,pdfpagemode=UseNone,hidelinks,pdfdisplaydoctitle=true},usepdftitle=false]{beamer}
+\usepackage{presentation}
+
+% Enter presentation title:
+\hypersetup{pdftitle={Presentation Example}}
+
+% Enter PDF file with figures:
+\def\pdf{figures.pdf}
+
+% Fill out presentation:
+\begin{document}
+\title{Presentation Title}
+\information{Author}%
+{Date}%
+{https://github.com/pmichaillat/latex-presentation}
+\frame[plain]{\titlepage}
+
+\begin{frame}
+\frametitle{Slide title}
+\begin{itemize}
+\item lorem ipsum dolor sit amet
+\item consectetur adipiscing elit
+\item sed do eiusmod tempor incididunt
+\begin{itemize}
+\item ut labore et dolore magna aliqua
+\item ut enim ad minim veniam
+\end{itemize}
+\item quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+\item duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Slide with alerts}
+\begin{enumerate}
+\item sed do eiusmod tempor incididunt
+\begin{itemize}
+\item ut labore et dolore magna aliqua
+\item ut enim ad minim veniam
+\end{itemize}
+\item ut enim \al{ad minim veniam}
+\item quis nostrud exercitation \al[2]{ullamco} laboris nisi ut aliquip ex ea commodo consequat
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Slide with symbols}
+\begin{enumerate}
+\item sed do eiusmod tempor \so incididunt
+\item ut labore et dolore \then magna aliqua
+\item ut enim ad minim \up
+\item veniam quis nostrud exercitation \down
+\item ex ea commodo consequat \flat 
+\item quis nostrud exercitation \tb laboris nisi ut aliquip \tb ex ea commodo consequat
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\heading{Section title}
+\end{frame}
+
+\begin{frame}
+\frametitle{Slide with graph}
+\includegraphics[scale=\sfig,page=4]{\pdf}%
+\end{frame}
+
+\begin{frame}
+\frametitle{Several graphs \only<1>{(use title as caption)}}
+\includegraphics<1>[scale=\sfig,page=1]{\pdf}%
+\includegraphics<2>[scale=\sfig,page=2]{\pdf}%
+\includegraphics<3>[scale=\sfig,page=3]{\pdf}%
+\includegraphics<4>[scale=\sfig,page=5]{\pdf}%
+\end{frame}
+
+\begin{frame}
+\frametitle{Slide with math}
+\begin{itemize}
+\item excepteur sint occaecat cupidatat $j \in \mathbb{R}$:
+\begin{equation*}
+\int_{0}^{\infty}e^{-\delta t} \ln(c_{j}(t))+ \mathcal{U}(b_{j}(t) - \mathcal{B}(t))- \frac{\zeta}{2} h_{j}(t) -\frac{\gamma}{2} \pi_{j}(t)^2\,dt
+\end{equation*}
+\vspace{-0.5cm}
+\begin{itemize}
+\item irure dolor: $c_{j}(t) = \int_{0}^{1}c_{jk}(t)^{(\epsilon-1)/\epsilon}\,dk$
+\item mollit anim id est:  $\mathcal{B}(t) = \int_{0}^{1} [b_{j}(t)]^{\sigma}\,dj$
+\item est laborum: $\pi_{j}(t) = \dot{p}_{j}(t)/p_{j}(t)$
+\end{itemize}
+\item in reprehenderit in voluptate:
+\begin{equation*}
+\dot{b}_{j}(t) = i(t) b_{j}(t) + p_{j}(t)  y_{j}(t) - \int_0^1 p_{k}(t) c_{jk}(t)\,dk
+\end{equation*}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\heading{Another section}
+\end{frame}
+
+\begin{frame}
+\frametitle{Slide with table and alerts and a long title (use title as caption)}
+\begin{table}
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lccc}
+\toprule
+ & $m < 0$ & $m = 0$ & $m > 0$\\
+\midrule
+$u>u^{*}$  & $\alr[2]{g/c<(g/c)^{*}}$  & $\alb[1]{g/c=(g/c)^{*}}$ & $\alg[3]{g/c>(g/c)^{*}}$ \\
+$u=u^{*}$ & $\alb[1]{g/c=(g/c)^{*}}$ & $\alb[1]{g/c=(g/c)^{*}}$  & $\alb[1]{g/c=(g/c)^{*}}$ \\ 
+$u<u^{*}$ & $\alg[3]{g/c>(g/c)^{*}}$ & $\alb[1]{g/c=(g/c)^{*}}$ & $\alr[2]{g/c<(g/c)^{*}}$ \\ 
+\midrule
+$\alpha = \beta$ & $\phi \approx \mu$ & $\omega < \theta$  & $\mathbb{Q}$ or $\mathbb{N}$ \\ 
+\bottomrule
+\end{tabular*}
+\end{table}
+\end{frame}
+
+\lastslide
+\end{document}
